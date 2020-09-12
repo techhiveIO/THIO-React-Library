@@ -1,10 +1,15 @@
 import React from 'react'
 
-import { ExampleComponent } from 'th-pattern-library'
 import 'th-pattern-library/dist/index.css'
+import {Button} from "th-pattern-library";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div>
+      <Button label='Primary Button'/>
+      <Button type="secondary" label='Secondary Button'/>
+    </div>
+  );
 }
 
 export default App

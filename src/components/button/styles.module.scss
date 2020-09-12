@@ -1,0 +1,41 @@
+@import "../../utilities/utilities";
+
+.btn {
+  padding: 1rem 2.8rem;
+
+  color: #ffffff;
+  border-radius: 2px;
+  border: none;
+
+  cursor: pointer;
+
+  transition: background-color .2s;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.primary {
+  background-color: #27add5;
+
+  &:hover {
+    background-color: tint(#27add5, 20%);
+  }
+
+  &:active {
+    background-color: shade(#27add5, 20%);
+  }
+}
+
+.secondary {
+  background-color: #16498a;
+
+  &:hover {
+    background-color: tint(#16498a, 20%);
+  }
+
+  &:active {
+    background-color: shade(#16498a, 20%);
+  }
+}
