@@ -1,0 +1,36 @@
+@import "../colors";
+@import "../../utilities/utilities";
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  $font-color: map_get($colors, black);
+
+  padding: 1rem;
+
+  font-size: 1rem;
+  color: tint($font-color, 50);
+  border-radius: 4px;
+  border: 1px solid map_get($colors, medium-gray);
+
+  transition: all .2s;
+
+  &:focus {
+    border-color: map_get($colors, tertiary);
+    color: $font-color;
+
+    outline: none;
+  }
+
+  &:invalid, &.is_error {
+    border-color: map_get($colors, red) !important;
+    color: map_get($colors, red) !important;
+  }
+}
+
+label {
+  color: map_get($colors, black);
+}

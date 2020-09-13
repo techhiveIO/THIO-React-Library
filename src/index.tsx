@@ -1,1 +1,2 @@
-export * from './components';
+import './styles.scss'
+export * from './components'

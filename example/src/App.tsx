@@ -13,6 +13,13 @@ const App = () => {
       <TrafficSign label='Traffic Signal'/>
       <TrafficSign label='Traffic Signal' type='clear' direction='left'/>
       <TrafficSign label='Traffic Signal' type='outline' direction='left'/>
+
+      <form>
+        <div className={'form-field'}>
+          <label>Input Label</label>
+          <input type='text' placeholder='Placeholder' name='text' className={'is_error'}/>
+        </div>
+      </form>
     </div>
   );
 }
