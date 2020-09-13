@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/chevron/right</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="button/trafficSign/left" transform="translate(-33.000000, -20.000000)">
+            <g id="Group" transform="translate(25.000000, 14.000000)">
+                <g id="Icon-24px" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) translate(-0.000000, -0.000000)">
+                    <polygon id="Shape" fill="#152036" points="10 6 8.59 7.41 13.17 12 8.59 16.59 10 18 16 12"></polygon>
+                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

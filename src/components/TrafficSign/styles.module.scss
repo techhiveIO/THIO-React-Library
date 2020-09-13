@@ -1,0 +1,61 @@
+@import "../../utilities/utilities";
+@import "../../theme/colors";
+
+@mixin buttonStates($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: tint($color, 20%);
+    text-decoration: underline;
+  }
+}
+
+.trafficSign {
+  display: inline-flex;
+
+  padding: 0.9rem 2.8rem;
+
+  font-size: 1rem;
+  color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  transition: background-color .2s;
+
+  &.primary {
+    @include buttonStates(map_get($colors, primary));
+  }
+
+  &.clear {
+    @include buttonStates(map_get($colors, light-gray));
+
+    background-color: white;
+    color: map_get($colors, secondary);
+  }
+
+  &.outline {
+    @include buttonStates(map_get($colors, light-gray));
+
+    color: map_get($colors, secondary);
+    background-color: white;
+    border-color: map_get($colors, primary);
+  }
+
+  &.left {
+    flex-direction: row-reverse;
+
+    .trafficSign__direction {
+      margin: auto 1rem auto 0;
+    }
+  }
+
+  &.right {
+    .trafficSign__direction {
+      margin: auto 0 auto 1rem;
+
+      transform: rotate(180deg);
+    }
+  }
+}

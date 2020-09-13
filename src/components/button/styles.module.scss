@@ -1,11 +1,25 @@
 @import "../../utilities/utilities";
+@import "../../theme/colors";
+
+@mixin buttonStates($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: tint($color, 20%);
+  }
+
+  &:active {
+    background-color: shade($color, 20%);
+  }
+}
 
 .btn {
   padding: 1rem 2.8rem;
 
+  font-size: 1rem;
   color: #ffffff;
   border-radius: 2px;
-  border: none;
+  border: 1px solid transparent;
 
   cursor: pointer;
 
@@ -17,25 +31,24 @@
 }
 
 .primary {
-  background-color: #27add5;
-
-  &:hover {
-    background-color: tint(#27add5, 20%);
-  }
-
-  &:active {
-    background-color: shade(#27add5, 20%);
-  }
+  @include buttonStates(map_get($colors, tertiary));
 }
 
 .secondary {
-  background-color: #16498a;
+  @include buttonStates(map_get($colors, primary));
+}
 
-  &:hover {
-    background-color: tint(#16498a, 20%);
-  }
+.clear {
+  @include buttonStates(map_get($colors, light-gray));
 
-  &:active {
-    background-color: shade(#16498a, 20%);
-  }
+  color: map_get($colors, secondary);
+  background-color: white;
+}
+
+.outline {
+  @include buttonStates(map_get($colors, light-gray));
+
+  color: map_get($colors, secondary);
+  background-color: white;
+  border-color: map_get($colors, primary);
 }

@@ -2,7 +2,7 @@ import * as React from 'react'
 import styles from './styles.module.scss'
 
 interface Props {
-  type?: 'primary' | 'secondary'
+  type?: 'primary' | 'secondary' | 'clear' | 'outline'
   label: string
 }
 
