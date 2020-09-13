@@ -9,4 +9,8 @@ $colors: (
   gray: #8A8A8A,
   black: #222222,
   white: #FFFFFF,
-)
+);
+
+$gradients: (
+  radial-secondary: radial-gradient(at 35% -20%, #3A4C71 7%, #1A2944 60%),
+);

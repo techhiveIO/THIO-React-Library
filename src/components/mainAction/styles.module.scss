@@ -1,0 +1,59 @@
+@import "../../theme/colors";
+
+.mainAction {
+  position: relative;
+
+  display: flex;
+
+  padding: 3rem 4rem;
+
+  color: white;
+  background: map_get($gradients, radial-secondary);
+  border-radius: 2px;
+
+  overflow: hidden;
+}
+
+.mainAction__content {
+  position: relative;
+
+  flex-basis: 65%;
+
+  z-index: 1;
+}
+
+.mainAction__ill {
+  position: absolute;
+  top: -34%;
+  right: -17%;
+
+  z-index: 0;
+
+  opacity: .5;
+}
+
+.mainAction__header, .mainAction__subheader {
+  margin: 0;
+}
+
+.mainAction__header {
+  line-height: 1.4;
+}
+
+.mainAction__subheader {
+  margin-bottom: 1rem;
+}
+
+.mainAction__actionSection {
+  position: relative;
+
+  display: flex;
+  flex-basis: 35%;
+
+  z-index: 1;
+}
+
+.mainAction__actionButton {
+  margin: auto auto 0 auto;
+}
+

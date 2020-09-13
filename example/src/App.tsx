@@ -1,7 +1,7 @@
 import React from 'react'
 
 import 'th-pattern-library/dist/index.css'
-import {Button, TrafficSign} from "th-pattern-library";
+import {Button, TrafficSign, MainAction} from "th-pattern-library";
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
       <TrafficSign label='Traffic Signal'/>
       <TrafficSign label='Traffic Signal' type='clear' direction='left'/>
       <TrafficSign label='Traffic Signal' type='outline' direction='left'/>
+      <MainAction actionLabel={'Start a Project'}/>
 
       <form>
         <div className={'form-field'}>
