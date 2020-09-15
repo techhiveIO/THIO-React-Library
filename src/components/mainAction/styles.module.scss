@@ -1,4 +1,4 @@
-@import "../../theme/colors";
+@import '../../theme/colors';
 
 .mainAction {
   position: relative;
@@ -29,10 +29,11 @@
 
   z-index: 0;
 
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.mainAction__header, .mainAction__subheader {
+.mainAction__header,
+.mainAction__subheader {
   margin: 0;
 }
 
@@ -56,4 +57,3 @@
 .mainAction__actionButton {
   margin: auto auto 0 auto;
 }
-

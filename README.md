@@ -13,14 +13,14 @@ npm install --save th-pattern-library
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import MyComponent from 'th-pattern-library'
-import 'th-pattern-library/dist/index.css'
+import MyComponent from 'th-pattern-library';
+import 'th-pattern-library/dist/index.css';
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```

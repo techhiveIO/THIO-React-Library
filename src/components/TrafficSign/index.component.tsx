@@ -1,12 +1,12 @@
-import * as React from 'react'
-import styles from './styles.module.scss'
-import { ReactComponent as LightChevron } from '../../assets/icons/chevron-white-left.svg'
-import { ReactComponent as DarkChevron } from '../../assets/icons/chevron-dark-left.svg'
+import * as React from 'react';
+import styles from './styles.module.scss';
+import { ReactComponent as LightChevron } from '../../assets/icons/chevron-white-left.svg';
+import { ReactComponent as DarkChevron } from '../../assets/icons/chevron-dark-left.svg';
 
 interface Props {
-  type?: 'primary' | 'clear' | 'outline'
-  label: string
-  direction?: 'left' | 'right'
+  type?: 'primary' | 'clear' | 'outline';
+  label: string;
+  direction?: 'left' | 'right';
 }
 
 export const TrafficSign = ({
@@ -18,19 +18,19 @@ export const TrafficSign = ({
     styles.trafficSign,
     styles[type],
     styles[direction]
-  ].join(' ')
+  ].join(' ');
 
   const renderChevron = () =>
     !['clear', 'outline'].includes(type) ? (
       <LightChevron className={styles.trafficSign__direction} />
     ) : (
       <DarkChevron className={styles.trafficSign__direction} />
-    )
+    );
 
   return (
     <a className={anchorClasses}>
       <span>{label}</span>
       {renderChevron()}
     </a>
-  )
-}
+  );
+};

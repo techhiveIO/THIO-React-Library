@@ -1,0 +1,16 @@
+.foldStepper {
+  display: flex;
+  flex-direction: column;
+}
+
+$indicatorSpacing: 10px;
+$indicatorHeight: 20px;
+
+.foldStepper__indicator {
+  position: relative;
+
+  width: 5px;
+  height: $indicatorHeight;
+
+  background-color: red;
+}

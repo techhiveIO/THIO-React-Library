@@ -1,13 +1,13 @@
-import * as React from 'react'
-import styles from './styles.module.scss'
-import { ReactComponent as Ill } from '../../assets/illustrations/brandElement.svg'
-import { Button } from '..'
+import * as React from 'react';
+import styles from './styles.module.scss';
+import { ReactComponent as Ill } from '../../assets/illustrations/brandElement.svg';
+import { Button } from '..';
 
 interface Props {
-  actionLabel: string,
+  actionLabel: string;
 }
 
-export const MainAction = ({actionLabel}: Props) => {
+export const MainAction = ({ actionLabel }: Props) => {
   return (
     <div className={styles.mainAction}>
       <Ill className={styles.mainAction__ill} />
@@ -22,9 +22,9 @@ export const MainAction = ({actionLabel}: Props) => {
       </div>
       <div className={styles.mainAction__actionSection}>
         <div className={styles.mainAction__actionButton}>
-          <Button label={actionLabel} type='clear'/>
+          <Button label={actionLabel} type='clear' />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
