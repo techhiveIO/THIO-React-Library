@@ -5,6 +5,9 @@
 
 $indicatorSpacing: 10px;
 $indicatorHeight: 20px;
+$scaleFactor: 1.5;
+$nextScaleFactor: 1.05;
+$animationDuration: 2s;
 
 .foldStepper__indicator {
   position: relative;
@@ -12,5 +15,97 @@ $indicatorHeight: 20px;
   width: 5px;
   height: $indicatorHeight;
 
-  background-color: red;
+  background-color: white;
+
+  border-radius: 5px;
+
+  &:nth-of-type(1) {
+    animation: extendBottom $animationDuration infinite;
+  }
+
+  &:nth-of-type(2) {
+    animation: extendTop $animationDuration infinite;
+  }
+}
+
+@keyframes extendBottom {
+  0% {
+    border-radius: 5px;
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+
+  50% {
+    border-radius: 5px 5px 0 0;
+    transform-origin: top;
+    transform: scaleY($scaleFactor);
+  }
+
+  60% {
+    border-radius: 5px 5px 0 0;
+    transform-origin: top;
+    transform: scaleY($scaleFactor);
+  }
+
+  80% {
+    border-radius: 5px;
+    transform-origin: top;
+    transform: scaleY(0.9);
+  }
+
+  90% {
+    border-radius: 5px;
+    transform-origin: top;
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    border-radius: 5px;
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes extendTop {
+  0% {
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+
+  50% {
+    border-radius: 0 0 5px 5px;
+    transform-origin: bottom;
+    transform: scaleY($nextScaleFactor);
+  }
+
+  60% {
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: scaleY(0.9);
+  }
+
+  70% {
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: scaleY($nextScaleFactor);
+  }
+
+  80% {
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: scaleY(0.9);
+  }
+
+  90% {
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: scaleY($nextScaleFactor);
+  }
+
+  100% {
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
 }
