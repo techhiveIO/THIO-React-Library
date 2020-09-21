@@ -3,11 +3,20 @@ import styles from './styles.module.scss';
 
 interface Props {
   totalSteps: number;
+  currentStep?: number;
   moveStep?: 1 | -1;
 }
 
-export const FoldStepper = ({ totalSteps = 1, moveStep }: Props) => {
+export const FoldStepper = ({
+  totalSteps = 1,
+  currentStep = 0,
+  moveStep
+}: Props) => {
   const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    console.log('this is our current step', currentStep);
+  }, [currentStep]);
 
   useEffect(() => {
     if (moveStep) {
@@ -23,7 +32,7 @@ export const FoldStepper = ({ totalSteps = 1, moveStep }: Props) => {
     const classes = [styles.foldStepper__indicator].join(' ');
     const topPosition = index * 10 + 'px';
 
-    return <div className={classes} key={index} style={{ top: topPosition }} />;
+    return <div className={classes} key={index} style={{ top: topPosition }}/>;
   };
 
   return (
