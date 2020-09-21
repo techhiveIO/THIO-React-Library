@@ -27,4 +27,6 @@ class Example extends Component {
 
 ## License
 
-MIT © [AliObaji](https://github.com/AliObaji)
+TechHive.IO React Library is © 2020 TechHive.IO LLC . It is distributed under the Creative Commons Attribution License.
+
+The names and logos for TechHive.IO LLC are trademarks of TechHive.IO LLC.
