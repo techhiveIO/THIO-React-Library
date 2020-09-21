@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './styles.module.scss';
 import { ReactComponent as Ill } from '../../assets/illustrations/brandElement.svg';
-import { Button } from '..';
+import { Button } from '../button/index.component';
 
 interface Props {
   actionLabel: string;
